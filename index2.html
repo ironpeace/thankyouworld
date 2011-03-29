@@ -6,38 +6,12 @@
       xmlns:svg="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink">
 	<head>
-		<title>THANKYOU WORLD</title>
+		<title>THANK YOU WORLD</title>
 
-		<style type='text/css'>
-
-			body{
-				background-color : #ffffff;
-				margin : 0px;
-				padding : 0px;
-			}
-			
-			h2{
-				margin : 0px;
-				padding : 0px;
-			}
-			
-			.copyrights{
-				color : #666666;
-				font-size : 9px;
-			}
-			
-			#tweetsTD{
-				background-color : #cccccc;
-				padding : 5px;
-			}
-
-			#tweetsBox{
-				background-color : #eeeeee;
-			}
-		</style>
-
+		<link rel="stylesheet" type="text/css" href="main.css">
 		<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
-		<!--<script type="text/javascript" src="jquery.tmpl.min.js"></script>-->
+		<script type="text/javascript" src="jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 		<script type="text/javascript">
 
 			var countries = {
@@ -290,111 +264,26 @@
 			};
 
 			var tweetsdata = [
-				{ "userName": "yamada taro", "tweetText": "あいうえお あいうえお あいうえお あいうえお あいうえお " },
-				{ "userName": "sato jiro", "tweetText": "あいうえお あいうえお あいうえお あいうえお あいうえお " },
-				{ "userName": "suzuki saburo", "tweetText": "あいうえお あいうえお あいうえお あいうえお あいうえお " }
+					{ "userName": "yamada taro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "sato jiro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "suzuki saburo", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "yamada taro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "sato jiro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "suzuki saburo", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "yamada taro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "sato jiro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "suzuki saburo", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "yamada taro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "sato jiro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "suzuki saburo", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "yamada taro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "sato jiro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "suzuki saburo", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "yamada taro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "sato jiro", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" },
+				{ "userName": "suzuki saburo", "tweetText": "あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　あいうえお　#ThankyouWorld #us" }
 			];
 
-
-			$(function(){
-
-				$(window).resize(function(){
-					//$("svg").height($(window).height());
-					//$("svg").width($(window).width());
-					$("#headerTR").height(50);
-					$("#footerTR").height(20);
-					$("#mainTR").height($(window).height() - 110);
-				});
-
-				//$("svg").height($(window).height());
-				//$("svg").width($(window).width());
-				$("#headerTR").height(50);
-				$("#footerTR").height(20);
-				$("#mainTR").height($(window).height() - 110);
-				
-				$("#country").text("ZZ");
-				
-				var selectedCn;
-				
-				var defaultColor = "#b9b9b9";
-				var hoverColor = "#ffb6c1";
-				var selectedColor = "#800000";
-
-				for(var c in countries)
-				{
-					var cd = "#" + countries[c].code2Char.toLowerCase();
-					
-					if(cd != "#jp"){
-						$(cd).hover(
-							function (event) {
-								$(this).css("fill",hoverColor);
-								/**
-								$("#xxx").append("<circle cx='0' cy='0' r='1000' style='stroke:#ff0000; stroke-width:15; fill:none'/>");
-								**/
-							},
-							function (event) {
-								if(selectedCn == $(this).attr("id")){
-									$(this).css("fill",selectedColor);
-								}else{
-									$(this).css("fill",defaultColor);
-								}
-							}
-						);// $(cd).hover
-
-						$(cd).click(function (event) {
-							var countryname = countries[$(this).attr("id").toUpperCase()].countryNameEN;
-							$("#countryname").text("Thank you " + countryname);
-							selectCountry($(this).attr("id"));
-							getTweets($(this).attr("id"));
-						});
-
-					} // if(cd != "#jp")
-				} // for(var c in countries)
-
-				$("#tweetThanksLink").click(function(event){
-					var selectedcountrycode = $('#countryCmb option:selected').val().toLowerCase();
-					window.open("http://twitter.com/?status=%23thankyouworld %23" + selectedcountrycode, "_blank");
-				});
-
-				$("#countryCmb").change(function(){
-					var selectedcountrycode = $('#countryCmb option:selected').val().toLowerCase();
-					selectCountry(selectedcountrycode);
-				});
-
-				function selectCountry(countryCode){
-					var cd = "#" + countryCode;
-					$(cd).css("fill",selectedColor);
-					$("#" + selectedCn).css("fill",defaultColor);
-					selectedCn = countryCode;
-				}
-
-				/**
-				var tweetBox = "<div class='tweet'><b>${userName}</b><span class='tweetText'>${tweetText}</span></div>";
-				**/
-
-
-				function getTweets(countryCode){
-					$("#tweetsBox").empty();
-					//$.template("tbt", tweetBox);
-					//$.tmpl("tbt", tweetsdata).appendTo("#tweetsBox");
-					
-					for(var tsd in tweetsdata){
-						alert(tweetsdata[tsd].userName + " +++ " + tweetsdata[tsd].tweetText);
-
-						var tweetContent = "<div class='tweet'><b>" + tweetsdata[tsd].userName + "</b><br />" +
-											"<span class='tweetText'>" + tweetsdata[tsd].tweetText + "</span></div>";
-						/**
-						var tweetContent = "<b>" + tweetsdata[tsd].userName + tweetsdata[tsd].tweetText + "</b>";
-						alert(tweetContent);
-						$("#tweetsBox").append(tweetsdata[tsd].userName + " +++ " + tweetsdata[tsd].tweetText);
-						$("#tweetsBox").append("<b>" + tweetsdata[tsd].userName + tweetsdata[tsd].tweetText + "</b>");
-						**/
-						$("#tweetsBox").append(tweetContent);
-					}
-					
-				}
-
-			});
 		</script>
 	</head>
 
@@ -3515,7 +3404,7 @@
 </svg>
 
 			</td>
-			<td id="tweetsTD" width="250" align="center" valign="top">
+			<td id="tweetsTD" valign="top">
 				<span id="countryname">Thankyou US.</span>
 				<div id="tweetsBox">
 				</div>
@@ -3523,7 +3412,12 @@
 		</tr>
 		<tr id="footerTR">
 			<td colspan="2" align="center" valign="middle">
-				<span class="copyrights"> Page created by @teppei_tosa, @xxxx and @xxxx </span>
+				<span class="copyrights">
+					created by 
+					<a href="http://twitter.com/#!/teppei_tosa">@teppei_tosa</a>, 
+					<a href="http://twitter.com/#!/pochi_black">@pochi_black</a> and 
+					<a href="#">@xxxx</a>
+				</span>
 			</td>
 		</tr>
 	</table>

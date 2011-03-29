@@ -1,0 +1,43 @@
+body{
+	background-color : #ffffff;
+	margin : 0px;
+	padding : 0px;
+}
+
+h2{
+	margin : 0px;
+	padding : 0px;
+}
+
+.copyrights{
+	color : #666666;
+	font-size : 9px;
+}
+
+#tweetsTD{
+	width : 250px;
+	background-color : #cccccc;
+	padding : 5px 1px;
+}
+
+#countryname{
+	text-align : center;
+}
+
+#tweetsBox{
+	height : 100%;
+	width : 100%;
+	background-color : #eeeeee;
+	margin : 1px;
+	overflow : auto;
+}
+
+.tweet{
+	background-color : #eeeeee;
+	border : inset 1px #ffffff;
+	padding : 1px 3px;
+}
+
+.tweetText{
+	font-size : 11px;
+}
