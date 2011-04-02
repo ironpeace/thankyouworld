@@ -20,6 +20,8 @@ $(function(){
 	var defaultColor = "#b9b9b9";
 	var hoverColor = "#ffb6c1";
 	var selectedColor = "#800000";
+    
+    var titleMsgTxt = "Thank you, World.";
 
 	for(var c in countries)
 	{
@@ -82,31 +84,15 @@ $(function(){
 
 	$("#selectLangCmb").change(function(){
 		var selectedLang = $('#selectLangCmb option:selected').val();
-		var transurl = "https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=" + "Thank you, World." + "&langpair=en%7C" + selectedLang;
 
-		/**
-		$.ajax({
-			type:"GET",
-			url:transurl,
-			dataType:"json",
-			data:"",
-			success:function(data){
-				alert("success");
-			},
-			error:function(XMLHttpRequest, textStatus, errorThrown){
-				alert("error status : " + textStatus );
-				alert("error thrown : " + errorThrown );
-		    }
+		google.language.translate(titleMsgTxt, "en", selectedLang, function(result) {
+			if (!result.error) {
+				$("#titleMsg").text(result.translation);
+			} else {
+				$("#titleMsg").text(titleMsgTxt + "*");
+			}
 		});
-		**/
-		/**
-		$.getJSON(transurl, function(json) {
-			alert("success");
-		});
-		**/
-		
+
 	});
-
-	//google.load("language", "1");
 
 });
