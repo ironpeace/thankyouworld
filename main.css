@@ -20,12 +20,7 @@ h2{
 	padding : 5px 1px;
 }
 
-#countryname{
-	text-align : center;
-}
-
 #tweetsBox{
-	height : 100%;
 	width : 100%;
 	background-color : #eeeeee;
 	margin : 1px;
@@ -39,5 +34,9 @@ h2{
 }
 
 .tweetText{
-	font-size : 11px;
+	font-size : 70%;
+}
+
+.thankyouMsg{
+	text-align : center;
 }

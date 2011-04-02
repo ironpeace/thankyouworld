@@ -13,9 +13,8 @@ $(function(){
 	$("#headerTR").height(50);
 	$("#footerTR").height(20);
 	$("#mainTR").height($(window).height() - 110);
-	
-	$("#country").text("ZZ");
-	
+	$("#tweetsBox").height($(window).height() - 170);
+
 	var selectedCn;
 	
 	var defaultColor = "#b9b9b9";
@@ -63,7 +62,7 @@ $(function(){
 	function selectCountry(countryCode){
 
 		var countryname = countries[countryCode.toUpperCase()].countryNameEN;
-		$("#countryname").text("Thank you " + countryname);
+			$("#countryname").html("Thank you <br /><b>" + countryname + "</b>");
 
 		var cd = "#" + countryCode;
 		$(cd).css("fill",selectedColor);
@@ -73,12 +72,41 @@ $(function(){
 		getTweets(countryCode);
 	}
 
-	var tweetBox = "<div class='tweet'><b>${userName}</b><br /><div class='tweetText'>${tweetText}</div></div>";
+	var tweetBox = "<div class='tweet'><img src='${imgurl}' width='30' height='30' /><b>${userName}</b><br /><div class='tweetText'>${tweetText}</div></div>";
 
 	function getTweets(countryCode){
 		$("#tweetsBox").empty();
 		$.template("tbt", tweetBox);
 		$.tmpl("tbt", tweetsdata).appendTo("#tweetsBox");
 	}
+
+	$("#selectLangCmb").change(function(){
+		var selectedLang = $('#selectLangCmb option:selected').val();
+		var transurl = "https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=" + "Thank you, World." + "&langpair=en%7C" + selectedLang;
+
+		/**
+		$.ajax({
+			type:"GET",
+			url:transurl,
+			dataType:"json",
+			data:"",
+			success:function(data){
+				alert("success");
+			},
+			error:function(XMLHttpRequest, textStatus, errorThrown){
+				alert("error status : " + textStatus );
+				alert("error thrown : " + errorThrown );
+		    }
+		});
+		**/
+		/**
+		$.getJSON(transurl, function(json) {
+			alert("success");
+		});
+		**/
+		
+	});
+
+	//google.load("language", "1");
 
 });
